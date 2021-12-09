@@ -1,11 +1,11 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:graphic/graphic.dart';
-import 'package:intl/intl.dart';
+//import 'package:intl/intl.dart';
 
 import '../data.dart';
 
-final _monthDayFormat = DateFormat('MM-dd');
+//final _monthDayFormat;
 
 class LineAreaPage extends StatelessWidget {
   LineAreaPage({Key? key}) : super(key: key);
@@ -54,9 +54,6 @@ class LineAreaPage extends StatelessWidget {
                   variables: {
                     'time': Variable(
                       accessor: (TimeSeriesSales datum) => datum.time,
-                      scale: TimeScale(
-                        formatter: (time) => _monthDayFormat.format(time),
-                      ),
                     ),
                     'sales': Variable(
                       accessor: (TimeSeriesSales datum) => datum.sales,
